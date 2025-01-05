@@ -1,0 +1,197 @@
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <div id="error-message" style="color: red; display: none;">Invalid email or password</div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SocialApp. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>console.log('Email:', email);<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialHub - Connect with People</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>SocialHub</h1>
+            <p>Connect with friends, family, and people you know.</p>
+        </div>
+    </header>
+
+    <section class="intro">
+        <h2>Welcome to SocialHub</h2>
+        <p>Your network, your world. Start connecting today!</p>
+        <button id="start-button">Get Started</button>
+    </section>
+
+    <section class="features">
+        <h2>Features</h2>
+        <div class="feature-box">
+            <h3>Connect with Friends</h3>
+            <p>Stay in touch with those who matter the most.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Share Moments</h3>
+            <p>Share photos, thoughts, and life updates.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Discover New People</h3>
+            <p>Explore new profiles and connect with like-minded individuals.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SocialHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html><ALOASK-SEPARATE-EDITORS>.auth-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}// utils.test.js
+const addNumbers = require('./utils');
+
+test('adds 1 + 2 to equal 3', () => {
+    expect(addNumbers(1, 2)).toBe(3);
+});/* style.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.feature-box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}<ALOASK-SEPARATE-EDITORS>script.js
+
+// Handle Like button click
+const likeButtons = document.querySelectorAll('.like-btn');
+likeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        if (this.innerText === 'Like') {
+            this.innerText = 'Liked';
+            this.style.backgroundColor = '#28a745'; // Change to green when liked
+        } else {
+            this.innerText = 'Like';
+            this.style.backgroundColor = '#007BFF'; // Change back to blue
+        }
+    });
+});
+
+// Handle Comment button click
+const commentButtons = document.querySelectorAll('.comment-btn');
+commentButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        alert("Add your comment feature here!");
+    });
+});// script.js
+
+document.getElementById('login-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    // Get form data
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Simple client-side validation (for demo purposes)
+    if (validateUser(email, password)) {
+        alert('Login successful!');
+        // Redirect to user dashboard or home page (this is a mock-up)
+        window.location.href = 'home.html'; 
+    } else {
+        // Show error message if invalid login
+        document.getElementById('error-message').style.display = 'block';
+    }
+});
+
+// Simple mock user validation (should be replaced with real server-side authentication)
+function validateUser(email, password) {
+    const mockUser = {
+        email: 'user@example.com',
+        password: 'password123' // In a real app, store hashed passwords
+    };
+
+    // In production, use a backend service to validate credentials
+    return email === mockUser.email && password === mockUser.password;
+}// utils.js
+function addNumbers(a, b) {
+    return a + b;
+}
+// script.js
+
+document.getElementById('start-button').addEventListener('click', function() {
+    alert('Welcome to SocialHub! Let\'s get started!');
+});
